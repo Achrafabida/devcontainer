@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  dev-container:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # This is where VS Code should expect to find your project's source code and the value of "workspaceFolder" in .devcontainer/devcontainer.json
+      - ../..:/workspaces:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    network_mode: service:mongo
+
+  mongo-gui:
+    image: mongo-express
+    network_mode: service:mongo
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_SERVER: localhost
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: root
+
+  mongo:
+    image: mongo:5.0.2
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - db:/data/db
+
+volumes:
+  db:
