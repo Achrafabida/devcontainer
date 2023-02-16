@@ -16,7 +16,8 @@ services:
     image: mongo-express
     network_mode: service:mongo
     depends_on:
-      - mongo
+      mongo:
+        condition: service_healthy
     environment:
       ME_CONFIG_MONGODB_SERVER: localhost
       ME_CONFIG_MONGODB_PORT: 27017
@@ -26,6 +27,16 @@ services:
   mongo:
     image: mongo:5.0.2
     restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    ports:
+      - 8080:8080
+      - 8081:8081
+
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
