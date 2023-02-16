@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "69564c91-a4cf-4102-938b-991b9d87b5ba",
+    "colId": "b5052228-cc80-4b26-ab4b-0f4083ed0cdc",
+    "containerId": "",
+    "name": "Create",
+    "url": "{{URL}}/api/tutorials",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-16T12:43:44.398Z",
+    "modified": "2023-02-16T12:53:51.655Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Devcontainer\",\n  \"description\": \"Node & Mongo in Devcontainer\",\n  \"published\": true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8a356bc0-a1d7-4b0d-9817-2092eec322ab",
+    "colId": "b5052228-cc80-4b26-ab4b-0f4083ed0cdc",
+    "containerId": "",
+    "name": "GetAll",
+    "url": "{{URL}}/api/tutorials",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-02-16T12:53:25.856Z",
+    "modified": "2023-02-16T12:53:48.631Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

@@ -30,7 +30,7 @@
 			"username": "node"
 		}
 	},
-	"initializeCommand": "cd ./api && npm i ",
+	"initializeCommand": "cd ./api && npm i",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -44,6 +44,9 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"thunder-client.saveToWorkspace": true
+			},
 			"extensions": [
 				"mikestead.dotenv",
 				"dbaeumer.vscode-eslint",
