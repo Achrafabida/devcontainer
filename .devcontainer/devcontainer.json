@@ -13,13 +13,14 @@
 	"portsAttributes": {
 		"8081": {
 			"label": "Mongo GUI",
-			"onAutoForward": "notify"
+			"onAutoForward": "openBrowser"
 		},
 		"8080": {
 			"label": "API",
-			"onAutoForward": "notify"
+			"onAutoForward": "openBrowser"
 		}
 	},
+	"forwardPorts": [8081],
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
@@ -30,7 +31,7 @@
 			"username": "node"
 		}
 	},
-	"initializeCommand": "cd ./api && npm i",
+	"postCreateCommand": "cd ./api && npm i",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -45,7 +46,8 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"thunder-client.saveToWorkspace": true
+				"thunder-client.saveToWorkspace": true,
+				"thunder-client.workspaceRelativePath": "api"
 			},
 			"extensions": [
 				"mikestead.dotenv",
