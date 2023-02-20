@@ -71,3 +71,30 @@ Thunder client will automatically load and sync the [Collections](api/thunder-te
 ### Features  
 Features are self-contained units of installation code, container configuration, and/or settings and extensions designed to enable new development capabilities in your dev container.
 In our example we used features to install zsh plugins (npm, node, zsh-autosuggestions...)
+
+# Open Workspace in Dev Container
+
+Let's try opening our workspace in a dev container.
+
+First, start VS Code if you haven't already.
+Then, select **"File > Open Folder..."** to open project root.
+
+![First Local](screenshots/first_local.PNG)
+
+On the bottom left side of the window,
+you can see the **"Open a remote window"** button
+(the blue rectangular button on the screenshot above).
+Click on it.
+
+![Remote Menu](screenshots/remote_menu.PNG)
+
+VS Code will open a menu like the screenshot above.
+Select **"Remote-Containers: Reopen in Container"**.
+
+![Loading](screenshots/loading.PNG)
+
+It will take some time until docker images are built
+& containers are started.
+After a few minutes (or few seconds, depends on your machine)
+VS Code will open your workspace in
+the dev container.
