@@ -9,6 +9,16 @@ The repo contains an express.js app connected to MongoDB
 
 The app has CRUD API to an entity name “tutorial”
 
+## Requisites
+Before you jump into this tutorial,
+you will need **Docker**, **Visual Studio Code**,
+and **Remote - Containers** VSCode extension installed on your machine.
+
+You can find instructions for installation here:
+- Docker: <https://docs.docker.com/get-docker/>
+- Visual Studio Code: <https://code.visualstudio.com/download>
+- Remote - Containers: <https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers>
+
   
 
 ## What is Devcontainer ?
