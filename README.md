@@ -79,19 +79,19 @@ Let's try opening our workspace in a dev container.
 First, start VS Code if you haven't already.
 Then, select **"File > Open Folder..."** to open project root.
 
-![First Local](screenshots/first_local.PNG)
+![First Local](screenshots/first_local.png)
 
 On the bottom left side of the window,
 you can see the **"Open a remote window"** button
 (the blue rectangular button on the screenshot above).
 Click on it.
 
-![Remote Menu](screenshots/remote_menu.PNG)
+![Remote Menu](screenshots/remote_menu.png)
 
 VS Code will open a menu like the screenshot above.
 Select **"Remote-Containers: Reopen in Container"**.
 
-![Loading](screenshots/loading.PNG)
+![Loading](screenshots/loading.png)
 
 It will take some time until docker images are built
 & containers are started.
